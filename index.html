@@ -1,13 +1,71 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Page Title</title>
+  <title>Rock-Paper-Scissors</title>
   <meta charset="UTF-8"/>
   <script src="rps.js"></script> 
+  <style>
+
+body {
+  background-image: url('bg.png');
+}
+    .container {
+      height: 200px;
+      position: relative;
+      border: none;
+    }
+
+    .container2 {
+      height: 200px;
+      position: relative;
+      border: 3px thick black;
+    }
+    
+    .center {
+      margin: 0;
+      position: absolute;
+      top: 40%;
+      left: 50%;
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+    }
+
+    .center2 {
+      margin: 0;
+      position: absolute;
+      top: 50%;
+      left: 70%;
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+    }
+    .center3 {
+      margin: 0;
+      position: absolute;
+      top: 70%;
+      left: 70%;
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+    }
+
+    </style>
 </head>
 <body>
-  
-
+  <div class="container">
+    <div class="center">
+      <button onclick="game()">Start</button>
+    </div>
+  </div>
+  <div class="container2">
+    <h1 class="center2" id="scores">
+      Scores
+    </h1>
+<p class="center2" id="gameresults" style="top: 80%;">
+Your results will be here.
+</p>
+<p class="center3" id="pcChoice" style="top: 100%;">
+  I'll beat you!
+  </p>
+  </div>
   
 </body>
 </html>
