@@ -12,7 +12,7 @@ let gameover;
 
 function computerPlay() {
 
-   n = Math.floor(Math.random() * 3) + 1;
+   n = Math.floor(Math.random() * 2) + 1;
 
    
    

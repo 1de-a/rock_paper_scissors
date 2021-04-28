@@ -3,69 +3,80 @@
 <head>
   <title>Rock-Paper-Scissors</title>
   <meta charset="UTF-8"/>
-  <script src="rps.js"></script> 
-  <style>
+  <script src="script.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
 
-body {
-  background-image: url('bg.png');
-}
-    .container {
-      height: 200px;
-      position: relative;
-      border: none;
-    }
-
-    .container2 {
-      height: 200px;
-      position: relative;
-      border: 3px thick black;
-    }
-    
-    .center {
-      margin: 0;
-      position: absolute;
-      top: 40%;
-      left: 50%;
-      -ms-transform: translate(-50%, -50%);
-      transform: translate(-50%, -50%);
-    }
-
-    .center2 {
-      margin: 0;
-      position: absolute;
-      top: 50%;
-      left: 70%;
-      -ms-transform: translate(-50%, -50%);
-      transform: translate(-50%, -50%);
-    }
-    .center3 {
-      margin: 0;
-      position: absolute;
-      top: 70%;
-      left: 70%;
-      -ms-transform: translate(-50%, -50%);
-      transform: translate(-50%, -50%);
-    }
-
-    </style>
 </head>
 <body>
-  <div class="container">
-    <div class="center">
-      <button onclick="game()">Start</button>
-    </div>
-  </div>
-  <div class="container2">
-    <h1 class="center2" id="scores">
-      Scores
-    </h1>
-<p class="center2" id="gameresults" style="top: 80%;">
-Your results will be here.
-</p>
-<p class="center3" id="pcChoice" style="top: 100%;">
-  I'll beat you!
+  <h1>
+      Rock-Paper-Scissors
+  </h1>
+  <p style="color: #ffb703;">
+First to 3 wins!
+
   </p>
-  </div>
-  
+  <div>
+      <div class="player">
+    <p style="color: #fb8500; font-size: 30px;">
+        Player
+    </p>
+    
+    
+    <div>
+        <button onclick="buttonRock()" class="btn" id="btn1">ROCK</button>
+    </div>
+    <div>
+        <button onclick="buttonPaper()" class="btn" id="btn2">PAPER</button>
+    </div>
+    <div>
+        <button onclick="buttonScissors()" class="btn" id="btn3">SCISSORS</button>
+    </div>
+
+    <div id="plIcon">
+        <img id="plRock" src="https://img.icons8.com/color/96/000000/hand-rock.png">
+        <img id="plPaper" src="https://img.icons8.com/color/96/000000/hand.png">
+        <img id="plScissors" src="https://img.icons8.com/color/96/000000/hand-scissors--v1.png">
+    </div>
+    
+    </div>
+    <div class="scores">
+        <ul id="gameLog" style="color: #fb8500;font-size: 30px;">Scores
+        
+            
+        </ul>
+        
+       
+    </div>
+    
+    <div class="computer">
+        <p style="color: #fb8500;font-size: 30px;">Computer</p>
+        <div style="float: right;">
+            <div>
+                <button class="btn" id="btn4">ROCK</button>
+            </div>
+            <div>
+                <button class="btn" id="btn5">PAPER</button>
+            </div>
+            <div>
+                <button class="btn" id="btn6">SCISSORS</button>
+            </div>
+        
+    </div>
+    <div id="pcIcon">
+        <img id="pcRock" src="https://img.icons8.com/color/96/000000/hand-rock.png">
+        <img id="pcPaper" src="https://img.icons8.com/color/96/000000/hand.png">
+        <img id="pcScissors" src="https://img.icons8.com/color/96/000000/hand-scissors--v1.png">
+    </div>
+    </div>
+   
+</div>
+<div class="final" id="finalScore">
+    
+</div>
+<div>
+    <button id="restartBtn" onclick="restartGame()" class="restartBtn">PLAY AGAIN</button>
+</div>
 </body>
 </html>
